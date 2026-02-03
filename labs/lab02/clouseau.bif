@@ -1,0 +1,24 @@
+network unknown {
+}
+variable Butler {
+    type discrete [ 2 ] { murderer, not_murderer };
+}
+variable Knife {
+    type discrete [ 2 ] { used, not_used };
+}
+variable Maid {
+    type discrete [ 2 ] { murderer, not_murderer };
+}
+probability ( Butler ) {
+    table 0.6, 0.4 ;
+}
+probability ( Knife | Butler, Maid ) {
+    ( murderer, murderer ) 0.3, 0.7;
+    ( murderer, not_murderer ) 0.2, 0.8;
+    ( not_murderer, murderer ) 0.6, 0.4;
+    ( not_murderer, not_murderer ) 0.1, 0.9;
+
+}
+probability ( Maid ) {
+    table 0.2, 0.8 ;
+}
