@@ -1,4 +1,34 @@
-# Lab 4 - LDPC Factor Graph Construction
+# Lab 4 - LDPC Factor Graph Construction NOTES
+
+> We want to transmit a message
+> Ultimately, we will want to calculate the posterior P(x|y)
+> Some assignments need to have probability 0. Thus we use parity checks (hard constraints)
+> They involve only subsets of variables
+> M : number of factors
+> N : nodes
+> Tipicaly, M<<N
+> parity check is a factor that checks for even, then count of bits modulus 2 should be 0
+> codewords: the things we can transmit (satisfy constraints, thus good assignments)
+> since x is hidden, we only observe y.
+> Binary Simetric channel
+> probability f that the bit is changed (phi)
+>
+> How to define the graph?
+> - how many factor parity checks
+> - scope of each factor for parity check
+>
+> We use regular LDPC paritycheck matrix generator (random)
+>
+> Old concept: Matrix H, with rows - parity check factor, column to a variable (bit in this case)
+> k is constant (degree of all factors)
+> j also a constant, num factors for each var
+>
+> Validation
+> - originallity. what do I need to do to validate correctness
+>
+> Calculate tree width of the graph
+
+
 
 This is the first of the two colab notebooks that form the project.
 
